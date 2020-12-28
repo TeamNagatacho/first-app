@@ -10,7 +10,7 @@
     "packages/**"
   ],
   "engines": {
-    "node": "12.16.3"
+    "node": "14.15.1"
   },
   "scripts": {
     "format": "prettier --ignore-path .gitignore --write \"**/*.{.ts,.js,tsx,jsx,json,md,sol,sh}\"",
