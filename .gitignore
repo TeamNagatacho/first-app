@@ -1,0 +1,34 @@
+# dependencies
+node_modules
+
+# next.js build output
+.next
+build
+
+# production server output
+dist
+
+# Firebase
+.firebase
+*.log
+
+# misc
+.DS_Store
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# add-on
+yarn.lock
+package-lock.json
+
+# env
+.env.*
+!.env.sample
+
+# vercel
+.vercel
+
+

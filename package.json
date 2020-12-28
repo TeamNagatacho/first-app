@@ -1,0 +1,62 @@
+{
+  "name": "web-app-template",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/cookunijs/web-app-template.git",
+  "author": "cookunijs",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "engines": {
+    "node": "12.16.3"
+  },
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{.ts,.js,tsx,jsx,json,md,sol,sh}\"",
+    "lint": "eslint --ignore-path .gitignore . --ext .ts,.js,tsx,jsx --max-warnings=0",
+    "killport": "kill-port --port 3000,5000,5001,8000,8080,8085,9099",
+    "clean": "run-p clean:*",
+    "clean:frontend": "yarn workspace frontend clean",
+    "clean:functions": "yarn workspace functions clean",
+    "prep": "yarn killport && yarn clean",
+    "pretest": "yarn prep",
+    "test": "run-p test:*",
+    "test:firestore": "yarn workspace firestore test",
+    "test:functions": "yarn workspace functions test",
+    "predev": "yarn prep",
+    "dev": "yarn run-p dev:*",
+    "dev:app": "run-p dev:app:*",
+    "dev:app:frontend": "yarn workspace frontend dev",
+    "dev:app:functions": "yarn workspace functions dev",
+    "dev:app:firebase": "firebase emulators:start --only auth,functions,firestore,pubsub",
+    "dev:app:storybook": "yarn workspace frontend storybook",
+    "prebuild": "yarn prep",
+    "build": "run-p build:*",
+    "build:frontend": "yarn workspace frontend build",
+    "build:functions": "yarn workspace functions build",
+    "deploy": "run-p deploy:*",
+    "deploy:frontend": "yarn workspace frontend deploy:dev",
+    "deploy:backend": "firebase deploy"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "firebase-tools": "^8.7.0",
+    "kill-port": "^1.6.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.9.7"
+  }
+}

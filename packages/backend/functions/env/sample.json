@@ -1,0 +1,14 @@
+{
+  "service_sampleA": {
+    "token": "xxx"
+  },
+  "service_sampleB": {
+    "access": "xxx",
+    "secret": "xxx"
+  },
+  "service_sampleC": {
+    "indexprefix": "dev_",
+    "id": "xxx",
+    "key": "xxx"
+  }
+}

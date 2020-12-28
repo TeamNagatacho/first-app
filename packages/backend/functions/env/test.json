@@ -1,0 +1,11 @@
+{
+  "deepl": {
+    "token": "xxx"
+  },
+  "service_sampleB": {
+    "consumerKey": "xxx",
+    "consumerSecret":  "xxx",
+    "accessToken":  "xxx",
+    "accessTokenSecret":  "xxx"
+  }
+}

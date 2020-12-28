@@ -1,0 +1,54 @@
+{
+  "emulators": {
+    "ui": {
+      "enabled": true,
+      "port": 5000
+    },
+    "auth": {
+      "port": 9099
+    },
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "pubsub": {
+      "port": 8085
+    }
+  },
+  "functions": {
+    "source": "packages/backend/functions",
+    "runtime": "nodejs12"
+  },
+  "firestore": {
+    "rules": "packages/backend/firestore/firestore.rules",
+    "indexes": "packages/backend/firestore/firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "packages/backend/storage/storage.rules"
+  },
+  "region": "asia-northeast1",
+  "environment": {
+    "production": {
+      "apiKey": "",
+      "authDomain": "",
+      "databaseURL": "",
+      "projectId": "",
+      "storageBucket": "",
+      "messagingSenderId": "",
+      "appId": "",
+      "measurementId": ""
+    },
+    "development": {
+      "apiKey": "",
+      "authDomain": "",
+      "databaseURL": "",
+      "projectId": "",
+      "storageBucket": "",
+      "messagingSenderId": "",
+      "appId": "",
+      "measurementId": ""
+    }
+  }
+}
