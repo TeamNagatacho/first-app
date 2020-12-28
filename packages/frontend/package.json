@@ -7,7 +7,7 @@
     "clean": "rm -rf .next && rm -rf dist",
     "dev": "cross-env APP_ENV=local nodemon",
     "deploy:dev": "yarn build && vercel",
-    "deploy:prod": "yarn build && vercel --sprod",
+    "deploy:prod": "yarn build && vercel --prod",
     "build": "yarn clean && run-p build:*",
     "build:next": "next build",
     "build:server": "tsc --project tsconfig.server.json",
